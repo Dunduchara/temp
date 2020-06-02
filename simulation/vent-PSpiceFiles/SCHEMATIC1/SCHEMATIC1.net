@@ -1,0 +1,9 @@
+* source VENT
+V_V1         N00147 0  
++PULSE 0 3.3 0 1n 1n {pulse_width} 12.5u
+X_U1         N01666 N00147 0 2N7002
+V_V2         +12V 0 12Vdc
+L_L1         N011480 +12V  10uH  
+R_R2         N01666 N011480  150 TC=0,0 
+C_C1         0 N01666  100n  TC=0,0 
+.PARAM  pulse_width=1u

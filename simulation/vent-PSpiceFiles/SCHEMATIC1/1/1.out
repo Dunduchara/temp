@@ -1,0 +1,170 @@
+
+**** 06/01/20 15:24:36 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ C:\Users\art_home\university\schem\sem6\dana\vent-PSpiceFiles\SCHEMATIC1\1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\art_home\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100u 0 100n 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source VENT
+V_V1         N00147 0  
++PULSE 0 3.3 0 1n 1n 6.25u 12.5u
+X_U1         N01666 N00147 0 2N7002
+V_V2         +12V 0 12Vdc
+L_L1         N011480 +12V  10uH  
+R_R2         N01666 N011480  150 TC=0,0 
+C_C1         0 N01666  100n  TC=0,0 
+
+**** RESUMING 1.cir ****
+.END
+
+**** 06/01/20 15:24:36 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ C:\Users\art_home\university\schem\sem6\dana\vent-PSpiceFiles\SCHEMATIC1\1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.DBD        
+          IS   48.116150E-15 
+          BV   60            
+         IBV   10.000000E-06 
+          RS    1.000000E-06 
+          TT   30.000000E-09 
+         CJO   16.940000E-12 
+          VJ     .5          
+           M     .2          
+
+
+**** 06/01/20 15:24:36 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ C:\Users\art_home\university\schem\sem6\dana\vent-PSpiceFiles\SCHEMATIC1\1.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.MINT       
+               NMOS            
+       LEVEL    3            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    2.148821     
+          KP     .51926      
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS    1.000000E-24 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+       UCRIT   10.000000E+03 
+        VMAX    1.000000E+03 
+         ETA    0            
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0  600            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 06/01/20 15:24:36 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ C:\Users\art_home\university\schem\sem6\dana\vent-PSpiceFiles\SCHEMATIC1\1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( +12V)   12.0000  (N00147)    0.0000 (N01666)   12.0000 (X_U1.1)    0.0000     
+
+(X_U1.2) 21.20E-12 (X_U1.3)   12.0000 (X_U1.4)   12.0000 (X_U1.5)   12.0000     
+
+(X_U1.6) 17.42E-12 (X_U1.7) 17.42E-12 (X_U1.8)-3.231E-27 (X_U1.9)   12.0000     
+
+(N011480)   12.0000                   (X_U1.11)    0.0000                       
+
+(X_U1.12)   12.0000                   (X_U1.13)    7.4300                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         1.200E-11
+    V_V2        -2.532E-09
+    X_U1.V11     0.000E+00
+
+    TOTAL POWER DISSIPATION   3.04E-08  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/01/20 15:24:36 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ C:\Users\art_home\university\schem\sem6\dana\vent-PSpiceFiles\SCHEMATIC1\1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .13
+

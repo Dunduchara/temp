@@ -1,0 +1,49 @@
+
+**** 06/01/20 15:33:55 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-2"  [ C:\Users\art_home\university\schem\sem6\dana\vent-PSpiceFiles\SCHEMATIC1\2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\art_home\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100u 0 100n 
+.STEP LIN PARAM pulse_width 0u 12.5u 0.5u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source VENT
+V_V1         N00147 0  
++PULSE 0 3.3 0 1n 1n pulse_width 12.5u
+---------------------$
+ERROR -- Expecting keyword STIMULUS, saw pulse_width.
+
+X_U1         N01666 N00147 0 2N7002
+V_V2         +12V 0 12Vdc
+L_L1         N011480 +12V  10uH  
+R_R2         N01666 N011480  150 TC=0,0 
+C_C1         0 N01666  100n  TC=0,0 
+.PARAM  pulse_width=1u
+
+**** RESUMING 2.cir ****
+.END
+

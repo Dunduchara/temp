@@ -1,0 +1,47 @@
+
+**** 06/01/20 15:05:18 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ C:\Users\art_home\university\schem\sem6\dana\vent-PSpiceFiles\SCHEMATIC1\1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\art_home\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100m 0 1m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source VENT
+V_V1         N00147 0  
++PULSE 0 3.3 0 1n 1n 6.25m 12.5m
+X_U1         N00962 N00147 0 2N7002
+V_V2         +12V 0 12Vdc
+L_L1         N00962 +12V  10uH  
+C_C1         0 N01269  100n  TC=0,0 
+
+**** RESUMING 1.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N01269.
+
+ERROR(ORPSIM-15142): Node N01269 is floating
+

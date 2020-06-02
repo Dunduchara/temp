@@ -1,0 +1,9 @@
+.ALIASES
+X_U1            U1(+=N00225 -=N00194 V+=+3.3 V-=0 OUT=N00185 ) CN
++@AMP.SCHEMATIC1(sch_1):INS32@NAT_SEMI.lmv321/SOT23/NS.Normal(chips)
+V_V1            V1(+=+3.3 -=0 ) CN @AMP.SCHEMATIC1(sch_1):INS67@SOURCE.VDC.Normal(chips)
+R_R1            R1(1=0 2=N00194 ) CN @AMP.SCHEMATIC1(sch_1):INS92@ANALOG.R.Normal(chips)
+V_V2            V2(+=N00225 -=0 ) CN @AMP.SCHEMATIC1(sch_1):INS238@SOURCE.VDC.Normal(chips)
+X_R2            R2(1=N00194 T=N00194 2=N00185 ) CN @AMP.SCHEMATIC1(sch_1):INS310@BREAKOUT.POT.Normal(chips)
+_    _(+3.3=+3.3)
+.ENDALIASES

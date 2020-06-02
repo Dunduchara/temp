@@ -1,0 +1,7 @@
+* source AMP
+X_U1         N00225 N00194 +3.3 0 N00185 lmv321/NS
+V_V1         +3.3 0 3.3vdc
+R_R1         0 N00194  1k TC=0,0 
+V_V2         N00225 0 0.01Vdc
+X_R2         N00194 N00194 N00185 POT PARAMS: SET={RPOT} VALUE=100K
+.PARAM  rpot=0.5
